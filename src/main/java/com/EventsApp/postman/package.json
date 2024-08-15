@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "0d8889cb-d19f-4acc-9b69-f5c9690694c1",
+    "name": "Events Application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "37229627"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "createUser",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\" : \"Oleg\",\r\n    \"lastName\" : \"Pof\",\r\n    \"email\" : \"jora@mail.ru\",\r\n    \"password\" : \"12345\",\r\n    \"username\" : \"poll\",\r\n    \"birthday\" : \"2000-11-04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8077/users/createUser"
+          },
+          "response": []
+        },
+        {
+          "name": "getAllUsers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/users/getUsers"
+          },
+          "response": []
+        },
+        {
+          "name": "getByUsername",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/users/getByUsername/poll"
+          },
+          "response": []
+        },
+        {
+          "name": "updateUser",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\" : \" kjknkj\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8077/users/updateUser/1"
+          },
+          "response": []
+        },
+        {
+          "name": "subscribe",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8077/users/subscribe/1/1"
+          },
+          "response": []
+        },
+        {
+          "name": "getUserSubscritions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/users/getUserSubscritions/1"
+          },
+          "response": []
+        },
+        {
+          "name": "unSubscribe",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "http://localhost:8077/users/unSubscribe/1/1"
+          },
+          "response": []
+        },
+        {
+          "name": "deleteUser",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8077/events/deleteEvent/1"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "createEvent",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"Christmas\",\r\n    \"description\" : \"amazing\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8077/events/createEvent"
+          },
+          "response": []
+        },
+        {
+          "name": "getAllEvents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/events/all"
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/events/GetById/1"
+          },
+          "response": []
+        },
+        {
+          "name": "getByTitle",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8077/events/getByTitle/Christmas"
+          },
+          "response": []
+        },
+        {
+          "name": "getEventSubscribers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8077/events/getEventSubscribers/1"
+          },
+          "response": []
+        },
+        {
+          "name": "updateEvents",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\" : \"cool\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8077/events/updateEvent/1"
+          },
+          "response": []
+        },
+        {
+          "name": "deleteEvent",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8077/events/deleteEvent/1"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
